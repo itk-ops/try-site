@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background: radial-gradient(#000015, #000000);
+}
+
+
+/* 背景の花火 */
+canvas {
+  position: fixed;   /* ←超重要 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+}
+
+/* 前面 */
+.foreground {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* 虹テキスト */
+.rainbow-text {
+  position: relative;
+  margin-top: 30vh; /* ←中央っぽく */
+
+  font-size: 60px;
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    purple
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  background-size: 400%;
+  animation: rainbowMove 6s linear infinite;
+}
+
+/* 虹アニメーション */
+@keyframes rainbowMove {
+  0% { background-position: 0% }
+  100% { background-position: 400% }
+}
+
+
+
+#score {
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+h1 {
+  color: white;
+}
+
+.result-box {
+  position: fixed;   /* ← absoluteじゃなくこれ */
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  z-index: 20;
+}
+
+.result-buttons {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
