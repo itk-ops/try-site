@@ -1,9 +1,0 @@
-{
-  "status": "success",
-  "message": "データを受け取りました",
-  "data": {
-    "id": 1,
-    "title": "サンプル記事",
-    "content": "これはテストデータです"
-  }
-}
